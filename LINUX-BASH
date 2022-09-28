@@ -26,6 +26,8 @@ sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/ - с
 
 sudo nginx -t - проверка синтаскиса конфигурационных файлов nginx
 
+sudo nginx -s reload - мягкая перезагрузка Nginx
+
 РАЗНОЕ
 
 curl -4 icanhazip.com - показывает ip-адресс машины с помощью стороннего сервиса
