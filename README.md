@@ -1,2 +1,2 @@
 # study
-Here is my stuff study
+Here is my stuff for study
