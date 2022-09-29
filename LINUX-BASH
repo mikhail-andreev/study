@@ -28,6 +28,10 @@ sudo nginx -t - проверка синтаскиса конфигурацион
 
 sudo nginx -s reload - мягкая перезагрузка Nginx
 
+MYSQL
+
+sudo mysql_secure_installation - запускает скрипт настройки безопасности
+
 РАЗНОЕ
 
 curl -4 icanhazip.com - показывает ip-адресс машины с помощью стороннего сервиса
