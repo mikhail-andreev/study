@@ -30,7 +30,15 @@ sudo nginx -s reload - мягкая перезагрузка Nginx
 
 MYSQL
 
+mysql -u root -p -вход в мускл когда включена аутентификация root с помощью пароля
+
 sudo mysql_secure_installation - запускает скрипт настройки безопасности
+
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+
+FLUSH PRIVILEGES; - перезагрузка прав доступа пользователей
+
+
 
 РАЗНОЕ
 
