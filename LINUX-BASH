@@ -38,6 +38,9 @@ SELECT user,authentication_string,plugin,host FROM mysql.user;
 
 FLUSH PRIVILEGES; - перезагрузка прав доступа пользователей
 
+ CREATE USER 'miha'@'localhost' IDENTIFIED BY 'password'; - создать пользователя
+ 
+GRANT ALL PRIVILEGES ON *.* TO 'miha'@'localhost' WITH GRANT OPTION; - дать все права
 
 
 РАЗНОЕ
