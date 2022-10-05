@@ -48,11 +48,22 @@ ansible-inventory --list -y - воводит список подключенны
 ansible all -m ping -u root - тестирование подключения к серверам, вместо root - имя пользователя
 
 ansible all -a "df -h" -u root - проверка использования дисков на всех подключенных серверах
- 
+
+CAT /PROC?
+
+cat /proc/loadavg
+/proc/cpuinfo
+cat /proc/interrupts
+cat /proc/partitions
+/proc/PID/status
+cat /proc/uptime
+cat /proc/meminfo
 
 РАЗНОЕ
 
 curl -4 icanhazip.com - показывает ip-адресс машины с помощью стороннего сервиса
+
+ls -l - список файлов с указанием владельцев
 
 ssh-keygen -t rsa -b 4096 -генерация ключа ssh
 
