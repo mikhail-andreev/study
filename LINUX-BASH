@@ -51,6 +51,7 @@ ansible all -a "df -h" -u root - проверка использования д�
 
 CAT /PROC/
 
+cat /etc/passwd
 cat /proc/loadavg
 cat /proc/cpuinfo
 cat /proc/interrupts
