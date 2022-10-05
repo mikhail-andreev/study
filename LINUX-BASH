@@ -49,15 +49,24 @@ ansible all -m ping -u root - тестирование подключения к
 
 ansible all -a "df -h" -u root - проверка использования дисков на всех подключенных серверах
 
-CAT /PROC?
+CAT /PROC/
 
 cat /proc/loadavg
-/proc/cpuinfo
+cat /proc/cpuinfo
 cat /proc/interrupts
 cat /proc/partitions
-/proc/PID/status
+cat /proc/PID/status
 cat /proc/uptime
 cat /proc/meminfo
+
+LSOF
+
+lsof -i 4 -a -p 1234 (просмотр всех соединений IPv4, открытых процессом с PID = 1234)
+lsof -i tcp:80 (просмотр информации о процессе, который прослушивает 80 TCP порт)
+lsof /dev/hd4 (Список открытых файлов на устройстве /dev/hd4)
+lsof /dev/cdrom (Список процессов, работающих с CD ROM)
+lsof -c ssh (Список подключений по ssh)
+
 
 РАЗНОЕ
 
