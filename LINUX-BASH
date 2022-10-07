@@ -28,6 +28,8 @@ sudo nginx -t - проверка синтаскиса конфигурацион
 
 sudo nginx -s reload - мягкая перезагрузка Nginx
 
+Test pull
+
 MYSQL
 
 mysql -u root -p -вход в мускл когда включена аутентификация root с помощью пароля
