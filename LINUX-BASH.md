@@ -1,18 +1,21 @@
-FIREWALL:
+# FIREWALL:
+```bash
 
-sudo ufw app list - выдает спискок приложений, которые "стучаться" в сеть
 
-sudo ufw status - выдает список и покзаывет статуст каждого приложения
+sudo ufw app list #- выдает спискок приложений, которые "стучаться" в сеть
 
-sudo ufw allow 'app_name' - разрешает выбранному приложению доступ к сети
+sudo ufw status #- выдает список и покзаывет статуст каждого приложения
 
-УПРАВЛЕНИЕ ПРИЛОЖЕНИЯМИ:
+sudo ufw allow 'app_name' #- разрешает выбранному приложению доступ к сети
 
-sudo systemctl status app_name - выдает статус выбранного приложения
+# УПРАВЛЕНИЕ ПРИЛОЖЕНИЯМИ:
 
-sudo systemctl restart app_name - презапуксает выбранное приложение
+sudo systemctl status app_name #- выдает статус выбранного приложения
 
-sudo systemctl enable\disable app_name - выключение/выклбчение выбранного сервиса
+sudo systemctl restart app_name #- презапуксает выбранное приложение
+
+sudo systemctl enable\disable app_name #- выключение/выклбчение выбранного сервиса
+```
 
 NGINX
 
