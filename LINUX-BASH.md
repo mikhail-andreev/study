@@ -93,7 +93,11 @@ git add . добавит в новый коммит все изменившие�
 git commit зафиксирует изменения
 git push --set-upstream origin add/vasiliyshilov отправит изменения на гит сервер
 
+SSH - туннели
 
+ssh -N -L 6379:adsbid-stage-rs01-ovh:6379 adsbid-stage-rs01-ovh - redis 
+
+ssh -N -L 3301:adsbid-stage-tnt01-ovh:3301 adsbid-stage-tnt01-ovh - тарантул
 
 
 РАЗНОЕ
