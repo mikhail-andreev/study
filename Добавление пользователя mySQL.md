@@ -11,7 +11,7 @@
 
 акого юзера нет, значит, он никогда не давал нам свой публичный ssh ключ. Значит мы не можем добавить его на сервер. Исправляем следующим образом: Идем к нему в личку и просим его публичный ключ. Создаем файл по образу и подобию здешних. По хорошему придерживаемся именования идентичного почтовому ящику.
 
-```vasiliy.shilov@profitclicks.info -> vasiliy.shilov -> vasiliy.shilov . pub```
+```vasiliy.shilov@profitclicks.info -> vasiliy.shilov -> vasiliy.shilov.pub```
 
 Этот ключ - часть git-репозитория. Поэтому чтобы он появился у других коллег, его надо запушить. Но перед тем как запушить, мы придерживаемся хоть какого-то подобия git flow; и работаем через ветки и мерж-реквесты. Работаем так абсолютно везде - хоть в наших репо, хоть с программистами. Особенно с программистами. Напрямую в мастер никогда не пушим.
 
@@ -23,7 +23,7 @@ git push --set-upstream origin add/vasiliyshilov отправит изменен
 Получаем ссылку на мерж, и отправляем её старшему админу
 После принятия мержа можно будет сделать:
 
- git checkout master; git pull
+ ```git checkout master; git pull```
 
 Теперь, когда у нас есть ключ в роли common; мы можем добавлять этот ключ в инвентаре и активно его использовать
 Анализируем задачу: КУДА надо добавить пользователя? Ответ: adsbid, stage, mysql.
@@ -47,7 +47,7 @@ common_additional_ssh_users
 
 Добавление настолько же просто насколько написать юзернейм.
 
-```common_users:
+common_users:
   - denis
   - a.sherbina
   - a.senkov
@@ -55,33 +55,36 @@ common_additional_ssh_users
 
 common_users_noshell:
   - v.edelkin          # Вадим Еделькин, тестировщик
-  - vasiliy.shilov     # Василий Шилов, QA-лид```
+  - vasiliy.shilov     # Василий Шилов, QA-лид
 
 
 Убеждены что все правильно? Тогда запускаем роль коммон на группу серверов в которую мы его добавили - в нашем случае, adsbid_stage_db_mdb
 
-```#!/usr/local/bin/ansible-playbook -CD
+
+/usr/local/bin/ansible-playbook -CD
 ---
 - name: COMMON
   hosts: adsbid_stage_db_mdb
   become: true
   roles:
-    - role: common```
+    - role: common
 
 Сначала запускаем его в check-mode; который не внесет изменений
 
-```ansible-playbook --check --diff --private-key=~/.ssh/profitclicks_servers.ppk zzz_z.yml```
+```console
+ansible-playbook --check --diff --private-key=~/.ssh/profitclicks_servers.ppk zzz_z.yml
+```
 
 Эта прокатка не внесет реальных изменений на сервер, а покажет что именно будет изменено.
 Например, вот роль показала что она добавит 1 user с помощью команды useradd.
 И в самом конце, при исполнения роли мы видим что все ОК.
 Изменения показываются, так что мы видим что именно пошло по плану а что нет. Если нас это устраивает (а нас устраивают изменения), катим тот же плейбук, просто без режима проверки.
 
-```
+
+```console
 ansible-playbook --check --diff --private-key=~/.ssh/profitclicks_servers.ppk zzz_z.yml
 
-ansible-playbook --diff --private-key=~/.ssh/profitclicks_servers.ppk zzz_z.yml
-
+ansible-playbook --diff --private-key=~/.ssh/profitclicks_servers.ppk zzz_z.yml 
 ```
 
 Итого через 5 минут изменения применяются, и плейбук завершает работу.
@@ -91,9 +94,11 @@ ansible-playbook --diff --private-key=~/.ssh/profitclicks_servers.ppk zzz_z.yml
 
 Сводится к набору команд:
 
-```mysql; # чтобы зайти в консоль мускуля.
+mysql; # чтобы зайти в консоль мускуля.
 SELECT host,user FROM mysql.users; # чтобы посмотреть какие юзеры есть сейчас (мало ли, уже дали доступ)
 SHOW DATABASES; #чтобы показать какие БД вообще присутствуют и спросить юзера к какой БД ему вообще нужен доступ _(в случае adsbid_stage это будет скорее всего bidnew_stage)_
-GRANT SELECT ON 'bidnew_stage'.* TO 'vasiliy_shilov'@'%' IDENTIFIED BY 'password123321'; FLUSH PRIVILEGES;```
+GRANT SELECT ON 'bidnew_stage'.* TO 'vasiliy_shilov'@'%' IDENTIFIED BY 'password123321'; FLUSH PRIVILEGES;
 
+```
 Ну а дальше все просто. Пароль у тебя есть, логин у тебя есть (тот же самый что и почта, просто все точки меняешь на нижнее подчеркивание. базы данных не любят точки.)
+```
