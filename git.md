@@ -19,3 +19,6 @@ git push --set-upstream origin add/vasiliyshilov отправит изменен
 git pull - забирает изменения с удаленного репозитория
 
 git rm --cached <file> - не следить за файлом
+
+
+gaa; gc -m "немножко изменений"; gpsup
