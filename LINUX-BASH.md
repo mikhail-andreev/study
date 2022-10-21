@@ -16,8 +16,6 @@ sudo systemctl enable\disable app_name #- выключение/выклбчен�
 ```
 
 
-
-
 MYSQL
 
 mysql -u root -p -вход в мускл когда включена аутентификация root с помощью пароля
@@ -33,18 +31,8 @@ FLUSH PRIVILEGES; - перезагрузка прав доступа польз�
 CREATE USER 'miha'@'localhost' IDENTIFIED BY 'password'; - создать пользователя
  
 GRANT ALL PRIVILEGES ON *.* TO 'miha'@'localhost' WITH GRANT OPTION; - дать все права
+
 Ansible 
-
-
-
-CREATE USER 'viktor_samohvalov' IDENTIFIED BY 'cxPQrgwA6X4PFUDyvFbz'; - создать пользователя
- 
-GRANT ALL PRIVILEGES ON *.* TO 'miha'@'localhost' WITH GRANT OPTION; - дать все права
-GRANT SELECT, VIEW SHOW PRIVILEGES ON *.* TO 'viktor_samohvalov'@'localhost' WITH GRANT OPTION; - дать все права
-Ansible 
-
- GRANT SELECT ON 'rtb'.* TO 'viktor_samohvalov'@'%' IDENTIFIED BY 'password123321'; FLUSH PRIVILEGES;
- GRANT SELECT ON 'rtb'.* TO 'viktor_samohvalov'@'%'; 
 
 ansible-inventory --list -y - воводит список подключенных серверов
 
@@ -98,5 +86,3 @@ ls -l - список файлов с указанием владельцев
 ssh-keygen -t rsa -b 4096 -генерация ключа ssh
 
 ssh-copy-id user_name@ip-address - копировать ssh ключ на удаленную машину
-
-
