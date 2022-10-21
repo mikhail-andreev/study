@@ -1,6 +1,4 @@
 # FIREWALL:
-```bash
-
 
 sudo ufw app list #- выдает спискок приложений, которые "стучаться" в сеть
 
@@ -17,21 +15,8 @@ sudo systemctl restart app_name #- презапуксает выбранное �
 sudo systemctl enable\disable app_name #- выключение/выклбчение выбранного сервиса
 ```
 
-NGINX
 
-sudo chown -R $USER:$USER /var/www/your_domain/html - назначение владения дирркторией, нужно для того чтобы была возможность чтения/записи
 
-sudo chmod -R 755 /var/www/site.ru - установка прав доступа
-
-sudo vim /etc/nginx/sites-available/your_domain - создание файла с директивами для запуска сервера
-
-sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/ - создание файловой ссылки на диррективы, чтобы nginx подтянул их при запуске
-
-sudo nginx -t - проверка синтаскиса конфигурационных файлов nginx
-
-sudo nginx -s reload - мягкая перезагрузка Nginx
-
-Test pull
 
 MYSQL
 
@@ -67,6 +52,8 @@ ansible all -m ping -u root - тестирование подключения к
 
 ansible all -a "df -h" -u root - проверка использования дисков на всех подключенных серверах
 
+ansible-playbook --check --diff --private-key=~/.ssh/andreev-2-test zzz_test.yml
+
 CAT /PROC/
 
 cat /etc/passwd
@@ -94,7 +81,7 @@ ssh -N -L 6379:adsbid-stage-rs01-ovh:6379 adsbid-stage-rs01-ovh - redis
 
 ssh -N -L 3301:adsbid-stage-tnt01-ovh:3301 adsbid-stage-tnt01-ovh - тарантул
 
- git add --all; git commit -v -m "суть изменений"; git push --set-upstream origin $(git_current_branch) -  Команда 3 в 1
+
 
 РАЗНОЕ
 lshw -businfo - краткая инофрмация об установленномс железе

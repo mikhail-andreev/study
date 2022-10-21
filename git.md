@@ -22,3 +22,5 @@ git rm --cached <file> - не следить за файлом
 
 
 gaa; gc -m "немножко изменений"; gpsup
+
+ git add --all; git commit -v -m "суть изменений"; git push --set-upstream origin $(git_current_branch) -  Команда 3 в 1
