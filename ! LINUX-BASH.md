@@ -16,21 +16,6 @@ sudo systemctl enable\disable app_name #- выключение/выклбчен�
 ```
 
 
-MYSQL
-
-mysql -u root -p -вход в мускл когда включена аутентификация root с помощью пароля
-
-sudo mysql_secure_installation - запускает скрипт настройки безопасности
-
-mysqldump -u root -p db_name > /db_backup.sql
-
-SELECT user,authentication_string,plugin,host FROM mysql.user;
-
-FLUSH PRIVILEGES; - перезагрузка прав доступа пользователей
-
-CREATE USER 'miha'@'localhost' IDENTIFIED BY 'password'; - создать пользователя
- 
-GRANT ALL PRIVILEGES ON *.* TO 'miha'@'localhost' WITH GRANT OPTION; - дать все права
 
 Ansible 
 

@@ -95,7 +95,7 @@ ansible-playbook --diff --private-key=~/.ssh/profitclicks_servers.ppk zzz_z.yml
 mysql;
 
 чтобы зайти в консоль мускуля.
-SELECT host,user FROM mysql.users; 
+SELECT host,user FROM mysql.user; 
 чтобы посмотреть какие юзеры есть сейчас (мало ли, уже дали доступ)
 
 SHOW DATABASES; 
