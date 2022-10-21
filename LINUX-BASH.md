@@ -73,6 +73,7 @@ lsof /dev/hd4 (Список открытых файлов на устройст�
 lsof /dev/cdrom (Список процессов, работающих с CD ROM)
 lsof -c ssh (Список подключений по ssh)
 
+GRANT ALL PRIVILEGES ON 'bidnew_stage'.* TO 'psergeev'@'%' IDENTIFIED BY 'lR7bclzB6N'; FLUSH PRIVILEGES; 
 
 
 SSH - туннели
