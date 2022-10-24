@@ -1,4 +1,4 @@
-NGINX
+## NGINX
 
 sudo chown -R $USER:$USER /var/www/your_domain/html - назначение владения дирркторией, нужно для того чтобы была возможность чтения/записи
 

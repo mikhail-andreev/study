@@ -1,4 +1,4 @@
-Установка CH:
+## Установка CH:
 
 ```sudo apt-get install -y apt-transport-https ca-certificates dirmngr
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 8919F6BD2B48D754
@@ -12,7 +12,7 @@ sudo apt-get install -y clickhouse-server clickhouse-client
 sudo service clickhouse-server start
 clickhouse-client # or "clickhouse-client --password" if you've set up a password.```
 
-Добавление пользователя:
+## Добавление пользователя:
 
 cat /etc/clickhouse-server/users.xml
 
@@ -31,7 +31,7 @@ cat /etc/clickhouse-server/users.xml
 </yandex>
 
 
-Настрйка профиля:
+## Настрйка профиля:
 
 
 cat /etc/clickhouse-server/users.xml
@@ -57,7 +57,7 @@ cat /etc/clickhouse-server/users.xml
     </users>
 </yandex>
 
-Настройка SSL:
+## Настройка SSL:
 
 certbot.eff.org
 
@@ -112,7 +112,7 @@ sudo chown clickhouse:clickhouse dhparam.pem
 /etc/clickhouse-client/config.xml
 <verificationMode>none</verificationMode>
 
-Настройка квот:
+## Настройка квот:
 
 cat /etc/clickhouse-server/users.xml
 
@@ -132,7 +132,7 @@ cat /etc/clickhouse-server/users.xml
     </quotas>
 </yandex>
 
-Шаридирование:
+## Шаридирование:
 
 Данные действия необходимо производить на двух нодах
 

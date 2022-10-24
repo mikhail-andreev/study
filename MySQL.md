@@ -15,7 +15,6 @@ CREATE USER 'miha'@'localhost' IDENTIFIED BY 'password'; - создать пол
 GRANT ALL PRIVILEGES ON *.* TO 'miha'@'localhost' WITH GRANT OPTION; - дать все права
 
 
-```console
 mysql;
 
 чтобы зайти в консоль мускуля.
@@ -27,5 +26,3 @@ SHOW DATABASES;
 #чтобы показать какие БД вообще присутствуют и спросить юзера к какой БД ему вообще нужен доступ _(в случае adsbid_stage это будет скорее всего bidnew_stage)_
 
 GRANT SELECT ON 'bidnew_stage'.* TO 'vasiliy_shilov'@'%' IDENTIFIED BY 'password123321'; FLUSH PRIVILEGES; 
-
-```

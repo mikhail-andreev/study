@@ -1,10 +1,10 @@
-Когда отвалились репозитории на CentOS 8:
+## Когда отвалились репозитории на CentOS 8:
 
 sudo sed -i -e "s|mirrorlist=|#mirrorlist=|g" /etc/yum.repos.d/CentOS-*
 sudo sed -i -e "s|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g" /etc/yum.repos.d/CentOS-*
 
 
-Добавление репозитория PowerTools:
+## Добавление репозитория PowerTools:
 
 You can enable it with the following commands:
 yum install dnf-plugins-core
