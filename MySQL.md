@@ -1,4 +1,4 @@
-MYSQL
+## MYSQL
 
 mysql -u root -p -вход в мускл когда включена аутентификация root с помощью пароля
 
@@ -14,6 +14,8 @@ CREATE USER 'miha'@'localhost' IDENTIFIED BY 'password'; - создать пол
  
 GRANT ALL PRIVILEGES ON *.* TO 'miha'@'localhost' WITH GRANT OPTION; - дать все права
 
+
+## Добавление пользователя 
 
 mysql;
 

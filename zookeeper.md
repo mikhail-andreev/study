@@ -1,4 +1,4 @@
-Уситановка:
+###Установка:
 
 sudo apt update
 sudo apt install -y default-jre-headless
@@ -11,7 +11,7 @@ mv apache-zookeeper-3.7.0-bin/* ./
 rm -rf apache-zookeeper-3.7.0-bin
 rm apache-zookeeper-3.7.0-bin.tar.gz
 
-Конфигурация ZK:
+### Конфигурация ZK:
 
 vim conf/zoo.cfg
 
@@ -24,7 +24,7 @@ clientPort=2181
 ./bin/zkCli.sh -server localhost:2181
 ./bin/zkServer.sh stop
 
-Создание сервиса ZK
+### Создание сервиса ZK
 
 useradd -M zookeeper
 
@@ -34,7 +34,7 @@ chown -R zookeeper:zookeeper /var/lib/zookeeper
 
 vim /lib/systemd/system/zookeeper.service
 
-Содержимое zookeeper.service:
+### Содержимое zookeeper.service:
 
 [Unit]
 Description=zookeeper:3.7.0

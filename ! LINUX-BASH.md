@@ -45,11 +45,15 @@ lsof /dev/cdrom (Список процессов, работающих с CD ROM
 lsof -c ssh (Список подключений по ssh)
 
 
-## SSH - туннели
+## SSH 
 
-ssh -N -L 6379:adsbid-stage-rs01-ovh:6379 adsbid-stage-rs01-ovh - redis 
+ssh-keygen -t rsa -b 4096 -генерация ключа ssh
 
-ssh -N -L 3301:adsbid-stage-tnt01-ovh:3301 adsbid-stage-tnt01-ovh - тарантул
+ssh-copy-id user_name@ip-address - копировать ssh ключ на удаленную машину
+
+ssh -N -L 6379:adsbid-stage-rs01-ovh:6379 adsbid-stage-rs01-ovh - тунель для redis 
+
+ssh -N -L 3301:adsbid-stage-tnt01-ovh:3301 adsbid-stage-tnt01-ovh - тунель для тарантул
 
 
 
@@ -63,7 +67,3 @@ df -h - информация о жестких дисках в удобном ф
 curl -4 icanhazip.com - показывает ip-адресс машины с помощью стороннего сервиса
 
 ls -l - список файлов с указанием владельцев
-
-ssh-keygen -t rsa -b 4096 -генерация ключа ssh
-
-ssh-copy-id user_name@ip-address - копировать ssh ключ на удаленную машину

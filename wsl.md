@@ -1,1 +1,1 @@
-wsl --shutdown
+wsl --shutdown - выулючение wsl

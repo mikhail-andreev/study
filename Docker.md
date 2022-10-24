@@ -1,3 +1,5 @@
+## Установка 
+
 sudo apt update
 sudo apt install apt-transport-https
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -11,7 +13,7 @@ docker ps
 docker ps -a
 docker images
 
-UPDATE IMAGE
+## UPDATE IMAGE
 ~~~~~~~~~~~~~
 docker run -d -p 7777:80 denis_ubuntu4
 docker exec -it 5267e21d140 /bin/bash
@@ -19,13 +21,13 @@ echo "V2" >> /var/www/html/index.html
 exit
 docker commit 5267e21d140 denis_v2:latest
 
-Export/Import Docker Image to file
+## Export/Import Docker Image to file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 docker save image:tag > arch_name.tar
 docker load -i arch_name.tar
 
 
-Import/Export Docker Image to AWS ECR
+## Import/Export Docker Image to AWS ECR
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 docker build -t denis:v1 .
 aws ecr get-login --no-include-email --region=ca-central-1 
@@ -36,7 +38,7 @@ docker pull 12345678.dkr.ecr.ca-central-1.amazonaws.com/myrepo:latest
 
 
 
-Kill and Delete Containers and Images
+## Kill and Delete Containers and Images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 docker rm -f $(docker ps -aq)        # Delete all Containers
 docker rmi -f $(docker images -q)    # Delete all Images
