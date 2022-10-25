@@ -16,6 +16,8 @@ git commit зафиксирует изменения
 
 git push --set-upstream origin add/p.sergeev отправит изменения на гит сервер
 
+git checkout master; - переключение в master
+
 git pull - забирает изменения с удаленного репозитория
 
 git rm --cached <file> - не следить за файлом
