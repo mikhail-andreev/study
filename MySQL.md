@@ -17,7 +17,9 @@ GRANT ALL PRIVILEGES ON *.* TO 'miha'@'localhost' WITH GRANT OPTION; - дать 
 
 
 mysqldump -u USERNAME -pPASSWORD DBNAME > DBBACKUP.sql
+
 mysqldump -u USERNAME -pPASSWORD --databases DB1 DB2 DB3.. >DBBACKUP.sql
+
 mysqldump -u USERNAME -pPASSWORD --all-databases > ALLDBBACKUP.sql
 
 -u — указывает ваше имя пользователя;
