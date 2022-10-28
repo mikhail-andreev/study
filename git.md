@@ -16,14 +16,16 @@ git commit зафиксирует изменения
 
 git push --set-upstream origin add/p.sergeev отправит изменения на гит сервер
 
+git push --set-upstream origin $(git_current_branch) - то же самое
+
 git checkout master; - переключение в master
 
 git pull - забирает изменения с удаленного репозитория
 
 git rm --cached <file> - не следить за файлом
 
-git push --set-upstream origin $(git_current_branch)
-
 gaa; gc -m "обновлено"; gpsup
 
 git add --all; git commit -v -m "суть изменений"; git push --set-upstream origin $(git_current_branch) -  Команда 3 в 1
+
+git reset --hard HEAD - отмена последней операции
