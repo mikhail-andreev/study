@@ -22,6 +22,7 @@ git pull - забирает изменения с удаленного репо�
 
 git rm --cached <file> - не следить за файлом
 
+git push --set-upstream origin $(git_current_branch)
 
 gaa; gc -m "обновлено"; gpsup
 
