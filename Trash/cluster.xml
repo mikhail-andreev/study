@@ -1,0 +1,27 @@
+vim /etc/clickhouse-server/cluster.xml
+
+<?xml version="1.0"?>
+<yandex>
+    <clickhouse_remote_servers>
+        <local> // Название кластера
+            <shard>
+                <replica>
+                    <host>10.1.1.51</host> // первая нода в нашем кластере
+                    <port>9000</port>
+                </replica>
+						</shard>
+						<shard>
+                <replica>
+                    <host>10.1.1.52</host> // вторая нода в нашем кластере
+                    <port>9000</port>
+                </replica>
+            </shard>
+            	<shard>
+                <replica>
+                    <host>10.1.1.53</host> // третья нода в нашем кластере
+                    <port>9000</port>
+                </replica>
+            </shard>
+        </local>
+    </clickhouse_remote_servers>
+</yandex>
