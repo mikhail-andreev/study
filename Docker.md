@@ -48,3 +48,8 @@ docker pull 12345678.dkr.ecr.ca-central-1.amazonaws.com/myrepo:latest
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 docker rm -f $(docker ps -aq)        # Delete all Containers
 docker rmi -f $(docker images -q)    # Delete all Images
+
+
+Команда Docker для вывода списка контейнеров имеет следующий вид:
+
+docker container ls [options]
