@@ -85,9 +85,6 @@ curl ifconfig.me ---||---||---
 
 ls -l - список файлов с указанием владельцев
 
-ip -br a
+ip -br a - узнать свой ip
 
-
-
-
-grep -riP '^ *[\d\*].*' /var/spool/cron/ /etc/cron*
+grep -riP '^ *[\d\*].*' /var/spool/cron/ /etc/cron*  - показывает все кроны
