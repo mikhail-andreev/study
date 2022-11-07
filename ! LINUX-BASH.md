@@ -25,6 +25,10 @@ cat /proc/PID/status
 cat /proc/uptime
 cat /proc/meminfo
 
+## NETSAT
+
+netstat -ltupan   - открытые порты
+
 ## LSOF
 
 lsof -i 4 -a -p 1234 (просмотр всех соединений IPv4, открытых процессом с PID = 1234)
@@ -40,9 +44,6 @@ ssh-keygen -t rsa -b 4096 -генерация ключа ssh
 
 ssh-copy-id user_name@ip-address - копировать ssh ключ на удаленную машину
 
-ssh -N -L 6379:adsbid-stage-rs01-ovh:6379 adsbid-stage-rs01-ovh - тунель для redis 
-
-ssh -N -L 3301:adsbid-stage-tnt01-ovh:3301 adsbid-stage-tnt01-ovh - тунель для тарантул
 
 ssh -N -L [LOCAL_IP:]LOCAL_PORT:DESTINATION:DESTINATION_PORT [USER@]SSH_SERVER
 Понадобятся такие параметры:
@@ -62,7 +63,7 @@ scp /home/test.txt root@123.123.123.123:/directory - перенос файла �
 
 scp root@123.123.123.123:/home/test.txt /directory - перенос файла с удаленной машины на локальную
 
-###### Конфурурация ssh для ускорения подключения
+##### Конфурурация ssh для ускорения подключения
 
 ~/.ssh/config
 
