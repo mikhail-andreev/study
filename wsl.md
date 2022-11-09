@@ -1,4 +1,4 @@
-wsl --shutdown - выулючение wsl
+wsl --shutdown - выключение wsl
 
 wsl -l -v
 

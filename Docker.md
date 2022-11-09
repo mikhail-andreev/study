@@ -20,6 +20,7 @@ docker ps
 docker ps -a
 docker images
 
+
 ## UPDATE IMAGE
 ~~~~~~~~~~~~~
 docker run -d -p 7777:80 denis_ubuntu4
@@ -32,6 +33,8 @@ docker commit 5267e21d140 denis_v2:latest
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 docker save image:tag > arch_name.tar
 docker load -i arch_name.tar
+
+
 
 ## Import/Export Docker Image to AWS ECR
 
@@ -53,3 +56,12 @@ docker rmi -f $(docker images -q)    # Delete all Images
 Команда Docker для вывода списка контейнеров имеет следующий вид:
 
 docker container ls [options]
+
+
+## Очистка неиспользуемых контейнеров
+
+docker system prune -f
+
+## Запуск bash в контейнере
+
+docker exec -it b804358424ae bash -l

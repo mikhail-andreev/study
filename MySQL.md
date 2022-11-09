@@ -23,8 +23,8 @@ CREATE USER 'miha'@'localhost' IDENTIFIED BY 'password'; - создать пол
  
 GRANT ALL PRIVILEGES ON *.* TO 'miha'@'localhost' WITH GRANT OPTION; - дать все права
 
-CREATE USER 'alexei_korchagin'@'%' IDENTIFIED BY 'asdasd;
-GRANT ALL PRIVILEGES ON vitrina_cab.* TO alexei_korchagin'@'%' WITH GRANT OPTION;
+CREATE USER 'apkuser1000'@'%' IDENTIFIED BY '4faksy8zzszdi1gs7yMtBJdJNr8LtzPF';
+GRANT ALL PRIVILEGES ON apkinformer_com.* TO 'apkuser1000'@'%' WITH GRANT OPTION;
 
 GRANT SELECT ON 'bidnew_stage'.* TO 'vasiliy_shilov'@'%' IDENTIFIED BY 'password123321'; FLUSH PRIVILEGES; 
 
@@ -35,6 +35,10 @@ mysqldump -u USERNAME -pPASSWORD DBNAME > DBBACKUP.sql
 mysqldump -u USERNAME -pPASSWORD --databases DB1 DB2 DB3.. >DBBACKUP.sql
 
 mysqldump -u USERNAME -pPASSWORD --all-databases > ALLDBBACKUP.sql
+
+mysqldump -u apkuser1000 -p4faksy8zzszdi1gs7yMtBJdJNr8LtzPF  apkinformer_com > DBBACKUP.sql
+
+mysqldump -u apkuser1000  apkuser1000 > DBBACKUP.sql
 
 -u — указывает ваше имя пользователя;
 -p — указывает пароль;
