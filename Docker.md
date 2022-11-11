@@ -34,29 +34,13 @@ docker commit 5267e21d140 denis_v2:latest
 docker save image:tag > arch_name.tar
 docker load -i arch_name.tar
 
-
-
-## Import/Export Docker Image to AWS ECR
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-docker build -t denis:v1 .
-aws ecr get-login --no-include-email --region=ca-central-1 
-docker tag  denis:v1  12345678.dkr.ecr.ca-central-1.amazonaws.com/myrepo:latest
-docker push 12345678.dkr.ecr.ca-central-1.amazonaws.com/myrepo:lastest
-
-docker pull 12345678.dkr.ecr.ca-central-1.amazonaws.com/myrepo:latest
-
-
-## Kill and Delete Containers and Images
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-docker rm -f $(docker ps -aq)        # Delete all Containers
-docker rmi -f $(docker images -q)    # Delete all Images
-
-
-Команда Docker для вывода списка контейнеров имеет следующий вид:
+## Вывод списка контейнеров имеет следующий вид:
 
 docker container ls [options]
 
+## Вывод инфы о контейнере:
+
+ocker inspect [OPTIONS] NAME|ID [NAME|ID...]
 
 ## Очистка неиспользуемых контейнеров
 
@@ -65,3 +49,14 @@ docker system prune -f
 ## Запуск bash в контейнере
 
 docker exec -it b804358424ae bash -l
+
+
+
+## Удаление контейнеров или образов
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+docker rm -f $(docker ps -aq)        # Delete all Containers
+docker rmi -f $(docker images -q)    # Delete all Images
+
+
+
+
