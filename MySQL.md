@@ -10,6 +10,8 @@ sudo mysql_secure_installation - запускает скрипт настрой�
 
 ### Добавление пользователя 
 
+
+
 mysql; -чтобы зайти в консоль мускуля.
 SELECT host,user FROM mysql.user;  - посмотреть какие юзеры есть сейчас (мало ли, уже дали доступ)
 
@@ -23,8 +25,9 @@ CREATE USER 'miha'@'localhost' IDENTIFIED BY 'password'; - создать пол
  
 GRANT ALL PRIVILEGES ON *.* TO 'miha'@'localhost' WITH GRANT OPTION; - дать все права
 
-CREATE USER 'apkuser1000'@'%' IDENTIFIED BY '4faksy8zzszdi1gs7yMtBJdJNr8LtzPF';
-GRANT ALL PRIVILEGES ON apkinformer_com.* TO 'apkuser1000'@'%' WITH GRANT OPTION;
+CREATE USER 'games_apkinformer'@'%' IDENTIFIED BY 'UhTHzptgRzD5A8mjbNqnmt73RHqer9';
+
+GRANT ALL PRIVILEGES ON games_apkinformer_com.* TO 'games_apkinformer'@'%' WITH GRANT OPTION;
 
 GRANT SELECT ON 'bidnew_stage'.* TO 'vasiliy_shilov'@'%' IDENTIFIED BY 'password123321'; FLUSH PRIVILEGES; 
 

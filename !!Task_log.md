@@ -70,7 +70,23 @@
 - Перенос apkinformer
 08.11.22
 - Очистка www-techru
-- Перенос apkinformer
+- Перенос apkinfor  
 - парковка
 - парава для сотрудника
 09.11.12
+- настройка apkinformer  FTP 
+- таблица по оплатам techru
+- Давал доступы
+- парковка
+10.11.12
+- Очистка harbor
+- Суппорт apkinformer
+- Паровка
+-Изучение gitlab ci и graylog
+11.11.12
+- Добавил apkinformer в хосттрекер и мониторинг
+- Суппорт apkinformer
+- Очистка harbor
+- Месячные
+- Доступы
+
