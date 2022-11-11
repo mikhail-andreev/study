@@ -6,4 +6,4 @@ ansible all -m ping -u root - тестирование подключения к
 
 ansible all -a "df -h" -u root - проверка использования дисков на всех подключенных серверах
 
-ansible-playbook --check --diff zzz_test.yml
+ansible-playbook --check --diff zzz_test.yml - накатываение плэйбука в режиме проверки 
