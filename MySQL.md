@@ -60,6 +60,10 @@ mysqldump -u your_username -p --all-databases
 
 mysqldump database_name > database_name-$(date +%Y%m%d).sql
 
+
+mysqldump -v --master-data=2 --single-transaction --quote-names --complete-insert --extended-insert --quick --ignore-table=vitrina_cab_prod.log_issue --ignore-table=vitrina_cab_prod.telescope_entries --ignore-table=vitrina_cab_prod.telescope_entries_tags vitrina_cab_prod | gzip > /tmp/dumpmysql.sql.gz
+
+
 ## Восстановление базы:
 
 mysql  database_name < file.sql
