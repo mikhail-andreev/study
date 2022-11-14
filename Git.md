@@ -31,3 +31,5 @@ gaa; gc -m "обновлено"; gpsup
 git add --all; git commit -v -m "суть изменений"; git push --set-upstream origin $(git_current_branch) -  Команда 3 в 1
 
 git reset --hard HEAD - отмена последней операции
+
+git remote -v -  списое удаленных репозиториев
