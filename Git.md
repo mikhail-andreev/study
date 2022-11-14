@@ -22,7 +22,6 @@ git push --set-upstream origin $(git_current_branch) - то же самое
 
 !!!!! git branch --set-upstream-to=origin/adsbid_parking adsbid_parking
 
-
 git checkout master; - переключение в master
 
 git pull - забирает изменения с удаленного репозитория
