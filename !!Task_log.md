@@ -91,3 +91,8 @@
 - Изучение gitlab ci и graylog
 - Регистрация домена Nativ.lab
 - Парковка
+14.11.22
+- настройка vps statka-preland-selectel
+- парковка
+- !!! спросить про apkinformer
+- оплата доменов

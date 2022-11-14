@@ -18,7 +18,10 @@ sudo systemctl enable\disable app_name #- выключение/выклбчен�
 
 ncdu -x - посмотреть чем занят диск, без подмонтированых дисков
 netstat -ltupan   - открытые порты
-s
+
+## Управление пользователями
+
+sudo usermod -aG sudo user - дать права root существующему пользователю
 
 ### CAT /PROC/
 
@@ -65,6 +68,12 @@ DESTINATION:DESTINATION_PORT – IP/имя хоста и порт машины �
 scp /home/test.txt root@123.123.123.123:/directory - перенос файла с локальной машины на удаленную
 
 scp root@123.123.123.123:/home/test.txt /directory - перенос файла с удаленной машины на локальную
+
+### SSH скопировать свой ключ
+
+```cd ~;  mkdir .ssh ; chmod 700 .ssh && echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDN6esyjE2jKgg1q2C2ImpRT+ZPkjE9/FumPbjoykAhFWatAQwW718ODIg219CMjHPEUSPhHzxz9D5SA2sAXG5Ddv29t6bK4HDZcRBtuYglD3Tr80lLXYoMaMMJTlNLxf3uaAPsHxWjLVHiv/CPvjbQp5CUlXXzj8/nEERBg7K2KJz2DIsR5BDZT2vOfOL0ajdzCFvKEbJDU5Dy/IQDV0j2K3ylDdjwYN6ZlyotfgudyxekLh2JaCBY7sOh3nE5dlWb7cmx02+xB47npJrJxlUmq1klerBhp6zEVPTG7RZk/dLHxX1j1DXVJpM3Y5wHW99KV1Mp+f3dH5d5JM43uXGRTHVxsdRNSuyOWfssNFwEuOj0WUMYhw1VH9peChhK2yLJm0h0FtAhQD9hSdIaCjuPMRSP5fyv5dudEQz68j67SQpmB5MDj9SKiouz34KYyeRjkTD3PN/39Ukhs5vBDFwxYE3e4Wb0l74ZBrulin/uab1VDxg8kgCcuJgrkfU1bpQt0tE8w94rTBb1uxF54HwRyXzmbnYRUe2PyL7vhrIZYGJ/PMkZP9dzhW31BpK+GCQhNuefqRe7U6IB2QNu8eFrgv4FYMNWd72/mw2NkMXbqIZ72zrdWwusT47/e4yUoWkZnQv5Nom5V05tbeFqJ7CeNcp36rmoHwNz28rxf2vyTQ== andre@Dell >> .ssh/authorized_keys && chmod 600 .ssh/authorized_keys ```
+
+
 
 #### Конфурурация ssh для ускорения подключения
 

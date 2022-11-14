@@ -10,7 +10,9 @@ git branch branch-name - переключается на последний ко
 
 git checkout -b add/p.sergeev - создаст нам отдельную ветку + переключится в неё
 
-git add . добавит в новый коммит все изменившиеся файлы в папке
+git add . добавит в новый коммит все  файлы в папке
+
+git add -A добавит в новый коммит все изменившиеся файлы в папке
 
 git commit зафиксирует изменения
 
@@ -19,6 +21,7 @@ git push --set-upstream origin add/p.sergeev отправит изменения
 git push --set-upstream origin $(git_current_branch) - то же самое
 
 !!!!! git branch --set-upstream-to=origin/adsbid_parking adsbid_parking
+
 
 git checkout master; - переключение в master
 
