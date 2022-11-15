@@ -35,3 +35,4 @@ git add --all; git commit -v -m "суть изменений"; git push --set-up
 git reset --hard HEAD - отмена последней операции
 
 git remote -v -  списое удаленных репозиториев
+

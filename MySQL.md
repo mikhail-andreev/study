@@ -23,11 +23,10 @@ CREATE USER 'miha'@'localhost' IDENTIFIED BY 'password'; - создать пол
  
 GRANT ALL PRIVILEGES ON *.* TO 'miha'@'localhost' WITH GRANT OPTION; - дать все права
 
-CREATE USER 'games_apkinformer'@'%' IDENTIFIED BY 'UhTHzptgRzD5A8mjbNqnmt73RHqer9';
+CREATE USER 'mark.mishenko'@'%' IDENTIFIED BY 'duUR0YamWzTYta3vmdAf';
 
-GRANT ALL PRIVILEGES ON games_apkinformer_com.* TO 'games_apkinformer'@'%' WITH GRANT OPTION;
 
-GRANT SELECT ON 'bidnew_stage'.* TO 'vasiliy_shilov'@'%' IDENTIFIED BY 'password123321'; FLUSH PRIVILEGES; 
+GRANT SELECT PRIVILEGES ON 'rtbstage'.* TO 'mark.mishenko'@'%'; FLUSH PRIVILEGES; 
 
 ### Резервное копирование 
 
