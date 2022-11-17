@@ -23,10 +23,9 @@ CREATE USER 'miha'@'localhost' IDENTIFIED BY 'password'; - создать пол
  
 GRANT ALL PRIVILEGES ON *.* TO 'miha'@'localhost' WITH GRANT OPTION; - дать все права
 
-CREATE USER 'mark.mishenko'@'%' IDENTIFIED BY 'duUR0YamWzTYta3vmdAf';
+CREATE USER 'alexei.korchagin'@'%' IDENTIFIED BY 'YQxVvFKsJZbdhlpjNgyCAKIcrt8so3';
 
-
-GRANT SELECT PRIVILEGES ON 'rtbstage'.* TO 'mark.mishenko'@'%'; FLUSH PRIVILEGES; 
+GRANT SELECT  ON vitrina_cab_prod.* TO 'alexei.korchagin'@'%'; FLUSH PRIVILEGES; 
 
 ### Резервное копирование 
 
