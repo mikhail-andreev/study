@@ -21,11 +21,15 @@ FLUSH PRIVILEGES; - перезагрузка прав доступа польз�
 
 CREATE USER 'miha'@'localhost' IDENTIFIED BY 'password'; - создать пользователя
  
-GRANT ALL PRIVILEGES ON *.* TO 'miha'@'localhost' WITH GRANT OPTION; - дать все права
+GRANT ALL PRIVILEGES ON *.* TO 'backup'@'%' WITH GRANT OPTION; - дать все права
 
 CREATE USER 'alexei.korchagin'@'%' IDENTIFIED BY 'YQxVvFKsJZbdhlpjNgyCAKIcrt8so3';
 
-GRANT SELECT  ON vitrina_cab_prod.* TO 'alexei.korchagin'@'%'; FLUSH PRIVILEGES; 
+CREATE USER 'mark_mishenko'@'%' IDENTIFIED BY 'giJZCtmeUxtOouLOUWB8';
+
+GRANT SELECT  ON DATABASE "rtb@ TO "mark_mishenko"; FLUSH PRIVILEGES; 
+
+CREATE USER 'backup'@'%' IDENTIFIED BY '2abvp3W34ZnjVFwc5oHJ';
 
 ### Резервное копирование 
 

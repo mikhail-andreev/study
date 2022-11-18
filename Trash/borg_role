@@ -1,0 +1,33 @@
+#  _____   ____  _      ______            ____   ____  _____   _____
+# |  __ \ / __ \| |    |  ____|          |  _ \ / __ \|  __ \ / ____|
+# | |__) | |  | | |    | |__     ______  | |_) | |  | | |__) | |  __
+# |  _  /| |  | | |    |  __|   |______| |  _ <| |  | |  _  /| | |_ |
+# | | \ \| |__| | |____| |____           | |_) | |__| | | \ \| |__| |
+# |_|  \_\\____/|______|______|          |____/ \____/|_|  \_\\_____|
+
+borg_fs_backup_jobs:
+  - name: common
+    src: "/etc /home/{{ borg_user }} /lib/systemd"
+    cron:
+      m: "7"
+      h: "2"
+    keep_hourly: 0
+    keep_daily: 7
+    keep_weekly: 4
+    keep_monthly: 12
+    keep_yearly: 1
+
+borg_mysql_backup_job:
+  user: "backup"
+  user_pw: "2abvp3W34ZnjVFwc5oHJ"
+  databases:
+    - apkinformer_com
+    - games_apkinformer_com
+    - mysql
+  cron:
+    m: 20
+  hc_url: "https://hc.techhprof.ru/ping/8a022899-1f4d-4307-8b7c-419e2a21a0f1"
+  keep_hourly: "24"
+  keep_daily: "7"
+  keep_weekly: "4"
+  keep_monthly: "12" 
