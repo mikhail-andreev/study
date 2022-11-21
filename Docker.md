@@ -40,7 +40,7 @@ docker system prune -f
 
 ## Запуск bash в контейнере
 
-docker exec -it b804358424ae bash -l
+docker exec -it eb3c425838a8 bash -l
 
 
 
