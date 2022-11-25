@@ -1,0 +1,7 @@
+net user uit1 11 /add 
+net localgroup "Пользователи удаленного рабочего стола" uit1 /add
+wmic UserAccount where Name='uit1' set PasswordExpires=False
+wmic UserAccount where Name='uit1' set passwordchangeable=false
+
+net stop termsrv
+net start termsrv
