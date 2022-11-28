@@ -34,5 +34,11 @@ git add --all; git commit -v -m "суть изменений"; git push --set-up
 
 git reset --hard HEAD - отмена последней операции
 
+git rebase develop - слияение с переносом комитов из указаной в текущую 
+
+git remote add - Добавить новый удаленный репо
+
 git remote -v -  списое удаленных репозиториев
+
+git rebase -i HEAD~3 - редактировать 3 последние коммита, например squash
 
