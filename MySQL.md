@@ -25,6 +25,8 @@ GRANT ALL PRIVILEGES ON *.* TO 'backup'@'%' WITH GRANT OPTION; - дать все
 
 CREATE USER 'alexei.korchagin'@'%' IDENTIFIED BY 'YQxVvFKsJZbdhlpjNgyCAKIcrt8so3';
 
+CREATE USER 'timur_shugushev'@'%' IDENTIFIED BY 'KFj94E4ZNmwoT6oX7ujmhlsB7Qrgao';
+
 CREATE USER 'mark_mishenko'@'%' IDENTIFIED BY 'giJZCtmeUxtOouLOUWB8';
 
 GRANT SELECT  ON DATABASE "rtb@ TO "mark_mishenko"; FLUSH PRIVILEGES; 

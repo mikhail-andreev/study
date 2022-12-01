@@ -12,16 +12,17 @@ sudo systemctl status app_name #- выдает статус выбранного
 
 sudo systemctl restart app_name #- презапуксает выбранное приложение
 
-sudo systemctl enable\disable app_name #- выключение/выклбчение выбранного сервиса
+sudo systemctl enable\disable app_name #- выключение/выключение выбранного сервиса
+
+## Управление пользователями
+
+sudo usermod -aG sudo user - дать права root существующему пользователю
 
 ## Инфо о системе
 
 ncdu -x - посмотреть чем занят диск, без подмонтированых дисков
 netstat -ltupan   - открытые порты
 
-## Управление пользователями
-
-sudo usermod -aG sudo user - дать права root существующему пользователю
 
 ### CAT /PROC/
 
@@ -50,6 +51,7 @@ ssh-keygen -t rsa -b 4096 -генерация ключа ssh
 
 ssh-copy-id user_name@ip-address - копировать ssh ключ на удаленную машину
 
+### SSH тонели
 
 ssh -N -L [LOCAL_IP:]LOCAL_PORT:DESTINATION:DESTINATION_PORT [USER@]SSH_SERVER
 Понадобятся такие параметры:
@@ -106,3 +108,9 @@ ls -l - список файлов с указанием владельцев
 ip -br a - узнать свой ip
 
 grep -riP '^ *[\d\*].*' /var/spool/cron/ /etc/cron*  - показывает все кроны
+
+partprobe - сообщить ядру что поменялась таблица разделов
+
+fdisk - разметка диска
+
+parted - разметка диска
