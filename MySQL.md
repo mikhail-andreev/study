@@ -29,9 +29,17 @@ CREATE USER 'timur_shugushev'@'%' IDENTIFIED BY 'KFj94E4ZNmwoT6oX7ujmhlsB7Qrgao'
 
 CREATE USER 'mark_mishenko'@'%' IDENTIFIED BY 'giJZCtmeUxtOouLOUWB8';
 
-GRANT SELECT  ON DATABASE "rtb@ TO "mark_mishenko"; FLUSH PRIVILEGES; 
+GRANT ALL PRIVILEGES  ON DATABASE cp_offer TO "alexei.korchagin"; FLUSH PRIVILEGES; 
 
 CREATE USER 'backup'@'%' IDENTIFIED BY '2abvp3W34ZnjVFwc5oHJ';
+
+REVOKE ALL PRIVILEGES ON *.* TO 'alexei.korchagin'@'%' WITH GRANT OPTION;
+
+GRANT SELECT ON *.* TO 'alexei.korchagin'@'%';
+
+REVOKE ALL ON *.* TO 'alexei.korchagin'@'%';
+
+SHOW GRANTS FOR 'alexei.korchagin'@'%';
 
 ### Резервное копирование 
 

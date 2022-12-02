@@ -52,3 +52,4 @@ docker rmi -f $(docker images -q)    # Delete all Images
 
 
 
+!!!!! docker service update cadvisor --force
