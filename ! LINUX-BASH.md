@@ -114,3 +114,8 @@ partprobe - сообщить ядру что поменялась таблица
 fdisk - разметка диска
 
 parted - разметка диска
+
+
+#generate config.d for all servers
+python3 /home/madfidel/profitclick-projects/sysadmin/iaac/scripts/inventory2sshconfig/generate -i /home/madfidel/profitclick-projects/sysadmin/iaac/inventory/profitclicks.yml --user m.andreev --key ~/.ssh/id_rsa > ~/.ssh/config.d/autogen
+

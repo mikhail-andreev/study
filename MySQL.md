@@ -25,7 +25,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'backup'@'%' WITH GRANT OPTION; - дать все
 
 CREATE USER 'alexei.korchagin'@'%' IDENTIFIED BY 'YQxVvFKsJZbdhlpjNgyCAKIcrt8so3';
 
-CREATE USER 'timur_shugushev'@'%' IDENTIFIED BY 'KFj94E4ZNmwoT6oX7ujmhlsB7Qrgao';
+CREATE USER 'timur.shugushev'@'%' IDENTIFIED BY 'timVoRHmqUx0pnJLDFq2vh11F7pW7w';
 
 CREATE USER 'mark_mishenko'@'%' IDENTIFIED BY 'giJZCtmeUxtOouLOUWB8';
 
@@ -35,7 +35,7 @@ CREATE USER 'backup'@'%' IDENTIFIED BY '2abvp3W34ZnjVFwc5oHJ';
 
 REVOKE ALL PRIVILEGES ON *.* TO 'alexei.korchagin'@'%' WITH GRANT OPTION;
 
-GRANT SELECT ON *.* TO 'alexei.korchagin'@'%';
+GRANT SELECT ON *.* TO 'timur.shugushev'@'%';
 
 REVOKE ALL ON *.* TO 'alexei.korchagin'@'%';
 
