@@ -20,12 +20,6 @@ docker ps
 docker ps -a
 docker images
 
-
-## Export/Import Docker Image to file
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-docker save image:tag > arch_name.tar
-docker load -i arch_name.tar
-
 ## Вывод списка контейнеров имеет следующий вид:
 
 docker container ls [options]
@@ -42,12 +36,16 @@ docker system prune -f
 
 docker exec -it eb3c425838a8 bash -l
 
-
-
 ## Удаление контейнеров или образов
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 docker rm -f $(docker ps -aq)        # Delete all Containers
 docker rmi -f $(docker images -q)    # Delete all Images
+
+## Сохранение образа или контейнера в файл
+
+docker save image:tag > arch_name.tar
+docker load -i arch_name.tar
+
 
 
 
