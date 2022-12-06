@@ -26,14 +26,14 @@ netstat -ltupan   - открытые порты
 
 ### CAT /PROC/
 
-cat /etc/passwd
-cat /proc/loadavg
-cat /proc/cpuinfo
-cat /proc/interrupts
-cat /proc/partitions
-cat /proc/PID/status
-cat /proc/uptime
-cat /proc/meminfo
+cat /etc/passwd  
+cat /proc/loadavg  
+cat /proc/cpuinfo  
+cat /proc/interrupts  
+cat /proc/partitions  
+cat /proc/PID/status  
+cat /proc/uptime  
+cat /proc/meminfo  
 
 
 ### LSOF
