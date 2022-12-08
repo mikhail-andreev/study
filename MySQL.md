@@ -11,6 +11,7 @@ sudo mysql_secure_installation - запускает скрипт настрой�
 ### Добавление пользователя 
 
 mysql; -чтобы зайти в консоль мускуля.
+
 SELECT host,user FROM mysql.user;  - посмотреть какие юзеры есть сейчас (мало ли, уже дали доступ)
 
 SHOW DATABASES;  показать какие БД вообще присутствуют 
@@ -40,6 +41,10 @@ GRANT SELECT ON *.* TO 'timur.shugushev'@'%';
 REVOKE ALL ON *.* TO 'alexei.korchagin'@'%';
 
 SHOW GRANTS FOR 'alexei.korchagin'@'%';
+
+### Посмотреть размеры БД
+
+SELECT table_schema AS "Database Name",  ROUND(SUM(data_length + index_length) / 1024 / 1024, 2) AS "Size in (MB)"  FROM information_schema.TABLES GROUP BY table_schema;
 
 ### Резервное копирование 
 
