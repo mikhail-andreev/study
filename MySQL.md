@@ -24,10 +24,6 @@ CREATE USER 'miha'@'localhost' IDENTIFIED BY 'password'; - создать пол
  
 GRANT ALL PRIVILEGES ON *.* TO 'backup'@'%' WITH GRANT OPTION; - дать все права
 
-CREATE USER 'alexei.korchagin'@'%' IDENTIFIED BY 'YQxVvFKsJZbdhlpjNgyCAKIcrt8so3';
-
-CREATE USER 'timur.shugushev'@'%' IDENTIFIED BY 'timVoRHmqUx0pnJLDFq2vh11F7pW7w';
-
 CREATE USER 'mark_mishenko'@'%' IDENTIFIED BY 'giJZCtmeUxtOouLOUWB8';
 
 GRANT ALL PRIVILEGES  ON DATABASE cp_offer TO "alexei.korchagin"; FLUSH PRIVILEGES; 
@@ -38,7 +34,7 @@ REVOKE ALL PRIVILEGES ON *.* TO 'alexei.korchagin'@'%' WITH GRANT OPTION;
 
 GRANT SELECT ON *.* TO 'timur.shugushev'@'%';
 
-REVOKE ALL ON *.* TO 'alexei.korchagin'@'%';
+REVOKE ALL ON *.* TO 'alexei.korchagin'@'%'; - отозвать права 
 
 SHOW GRANTS FOR 'alexei.korchagin'@'%';
 

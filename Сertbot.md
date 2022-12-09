@@ -10,3 +10,9 @@ certbot certonly --cert-name proftracker.xyz --webroot -w /var/www/html --domain
 curl -vI --resolve proftracker.xyz:443:192.168.1.6 https://proftracker.xyz
 echo | openssl s_client -servername 4mjlixyhcc.com -verify_hostname 4mjlixyhcc.com -verify 2 -connect 15.235.165.96:443 2>/dev/null | openssl x509 -noout -dates
 true | openssl s_client -showcerts -servername qewktvltio.com -verify_hostname -connect localhost:443 2>&1 | openssl x509 -noout -text -dates 
+
+
+
+true | openssl s_client -showcerts -servername qewktvltio.com -verify_hostname -connect 192.168.1.6:443 2>&1 | openssl x509 -noout -text -dates 
+
+curl -vI --haproxy-protocol --resolve qewktvltio.com:443:10.2.4.11 https://qewktvltio.com 2>&1 >/dev/null | grep -A 7 "Server certificate"
