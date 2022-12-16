@@ -24,7 +24,7 @@ CREATE USER 'miha'@'localhost' IDENTIFIED BY 'password'; - создать пол
  
 GRANT ALL PRIVILEGES ON *.* TO 'backup'@'%' WITH GRANT OPTION; - дать все права
 
-CREATE USER 'mark_mishenko'@'%' IDENTIFIED BY 'giJZCtmeUxtOouLOUWB8';
+CREATE USER 'stanislav.andreev'@'%' IDENTIFIED BY '2iGwlGcGSUUfQcJYNNfRMu2cRrwRsE';
 
 GRANT ALL PRIVILEGES  ON DATABASE cp_offer TO "alexei.korchagin"; FLUSH PRIVILEGES; 
 
@@ -32,11 +32,11 @@ CREATE USER 'backup'@'%' IDENTIFIED BY '2abvp3W34ZnjVFwc5oHJ';
 
 REVOKE ALL PRIVILEGES ON *.* TO 'alexei.korchagin'@'%' WITH GRANT OPTION;
 
-GRANT SELECT ON *.* TO 'timur.shugushev'@'%';
+GRANT SELECT ON *.* TO 'stanislav.andreev'@'%';
 
 REVOKE ALL ON *.* TO 'alexei.korchagin'@'%'; - отозвать права 
 
-SHOW GRANTS FOR 'alexei.korchagin'@'%';
+SHOW GRANTS FOR 'stanislav.andreev'@'%';
 
 ### Посмотреть размеры БД
 
