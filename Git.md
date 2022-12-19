@@ -42,3 +42,8 @@ git remote -v -  список удаленных репозиториев
 
 git rebase -i HEAD~3 - редактировать 3 последние коммита, например squash
 
+
+
+
+
+alias gp='for i in `find /Users/evgeniydubrovskiy/ProfitClicks/ -name .git | sed -e "s/.git//g"`;do echo "GIT PULL $i";cd $i 2>/dev/null;git pull;done;cd ~'
