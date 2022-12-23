@@ -22,7 +22,7 @@ FLUSH PRIVILEGES; - перезагрузка прав доступа польз�
 
 CREATE USER 'miha'@'localhost' IDENTIFIED BY 'password'; - создать пользователя
  
-GRANT ALL PRIVILEGES ON *.* TO 'backup'@'%' WITH GRANT OPTION; - дать все права
+GRANT ALL PRIVILEGES ON *.* TO 'stanislav.andreev'@'%' WITH GRANT OPTION; - дать все права
 
 CREATE USER 'stanislav.andreev'@'%' IDENTIFIED BY '2iGwlGcGSUUfQcJYNNfRMu2cRrwRsE';
 
@@ -84,3 +84,8 @@ mysql  database_name < file.sql
 Параметр -all-databases используется для резервного копирования всего массива баз данных. Если вы хотите восстановить только одну базу данных из файла, где их сразу несколько, то можно сделать это с помощью --one-database:
 
 mysql --one-database database_name < all_databases.sql
+
+
+mysql i114029_gruzowoz < i114029_gruzowoz.sql
+
+mysql i114029_zzzplay < i114029_zzzplay.sql

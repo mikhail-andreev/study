@@ -26,7 +26,7 @@ docker container ls [options]
 
 ## Вывод инфы о контейнере:
 
-ocker inspect [OPTIONS] NAME|ID [NAME|ID...]
+docker inspect [OPTIONS] NAME|ID [NAME|ID...]
 
 ## Очистка неиспользуемых контейнеров
 
