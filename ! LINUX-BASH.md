@@ -119,3 +119,16 @@ parted - разметка диска
 #generate config.d for all servers
 python3 /home/madfidel/profitclick-projects/sysadmin/iaac/scripts/inventory2sshconfig/generate -i /home/madfidel/profitclick-projects/sysadmin/iaac/inventory/profitclicks.yml --user m.andreev --key ~/.ssh/id_rsa > ~/.ssh/config.d/autogen
 
+
+
+chsh -s /bin/bash
+
+sudo mkhomedir_helper bob
+
+usermod -aG sudo
+
+firewall-cmd --zone=external --add-forward-port="port=11080:proto=tcp:toport=80:toaddr=10.1.1.60"
+firewall-cmd --zone=external --add-forward-port="port=11443:proto=tcp:toport=443:toaddr=10.1.1.60"
+
+# смена пароля в одну строку
+echo «password123» | passwd —stdin root
