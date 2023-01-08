@@ -87,6 +87,11 @@ Host *
   ControlPath ~/.ssh/cm_socket/%r@%h:%p
 
 
+## SSH прингудительно по паролю
+
+ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no user@example.com
+
+
 ## РАЗНОЕ
 
 journalctl --vacuum-size=100M - очитстка логов
@@ -131,4 +136,6 @@ firewall-cmd --zone=external --add-forward-port="port=11080:proto=tcp:toport=80:
 firewall-cmd --zone=external --add-forward-port="port=11443:proto=tcp:toport=443:toaddr=10.1.1.60"
 
 # смена пароля в одну строку
+echo "root:password123" | chpasswd
 echo «password123» | passwd —stdin root
+echo -e «password \ npassword» | passwd root
