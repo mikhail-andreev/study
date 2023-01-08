@@ -20,7 +20,7 @@ sudo usermod -aG sudo user - дать права root существующему
 
 ## Инфо о системе
 
-ncdu -x - посмотреть чем занят диск, без подмонтированых дисков
+ncdu -x - посмотреть чем занят диск, без подмонтированых дисков  
 netstat -ltupan   - открытые порты
 
 
@@ -38,11 +38,11 @@ cat /proc/meminfo
 
 ### LSOF
 
-lsof -i 4 -a -p 1234 (просмотр всех соединений IPv4, открытых процессом с PID = 1234)
-lsof -i tcp:80 (просмотр информации о процессе, который прослушивает 80 TCP порт)
-lsof /dev/hd4 (Список открытых файлов на устройстве /dev/hd4)
-lsof /dev/cdrom (Список процессов, работающих с CD ROM)
-lsof -c ssh (Список подключений по ssh)
+lsof -i 4 -a -p 1234 (просмотр всех соединений IPv4, открытых процессом с PID = 1234)  
+lsof -i tcp:80 (просмотр информации о процессе, который прослушивает 80 TCP порт)  
+lsof /dev/hd4 (Список открытых файлов на устройстве /dev/hd4)  
+lsof /dev/cdrom (Список процессов, работающих с CD ROM)  
+lsof -c ssh (Список подключений по ssh)  
 
 
 ## SSH 
@@ -54,7 +54,7 @@ ssh-copy-id user_name@ip-address - копировать ssh ключ на уда
 ### SSH тонели
 
 ssh -N -L [LOCAL_IP:]LOCAL_PORT:DESTINATION:DESTINATION_PORT [USER@]SSH_SERVER
-Понадобятся такие параметры:
+
 
 [LOCAL_IP:]LOCAL_PORT – IP-адрес и номер порта локального компьютера. Если локальный IP не указан, SSH-клиент привязывается к локальному хосту.
 
@@ -87,7 +87,7 @@ Host *
   ControlPath ~/.ssh/cm_socket/%r@%h:%p
 
 
-## SSH прингудительно по паролю
+## SSH принудительно по паролю
 
 ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no user@example.com
 
@@ -132,10 +132,10 @@ sudo mkhomedir_helper bob
 
 usermod -aG sudo
 
-firewall-cmd --zone=external --add-forward-port="port=11080:proto=tcp:toport=80:toaddr=10.1.1.60"
-firewall-cmd --zone=external --add-forward-port="port=11443:proto=tcp:toport=443:toaddr=10.1.1.60"
+firewall-cmd --zone=external --add-forward-port="port=11080:proto=tcp:toport=80:toaddr=10.1.1.60"  
+firewall-cmd --zone=external --add-forward-port="port=11443:proto=tcp:toport=443:toaddr=10.1.1.60"  
 
 # смена пароля в одну строку
-echo "root:password123" | chpasswd
-echo «password123» | passwd —stdin root
-echo -e «password \ npassword» | passwd root
+echo "root:password123" | chpasswd  
+echo «password123» | passwd —stdin root  
+echo -e «password \ npassword» | passwd root  
