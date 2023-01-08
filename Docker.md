@@ -16,11 +16,14 @@ sudo systemctl status docker
 
 sudo usermod -aG docker $USER
 
-docker ps
-docker ps -a
+
 docker images
 
-## Вывод списка контейнеров имеет следующий вид:
+## Вывод списка контейнеров :
+
+docker ps
+
+docker ps -a
 
 docker container ls [options]
 

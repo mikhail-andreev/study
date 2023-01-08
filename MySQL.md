@@ -28,7 +28,6 @@ CREATE USER 'stanislav.andreev'@'%' IDENTIFIED BY '2iGwlGcGSUUfQcJYNNfRMu2cRrwRs
 
 GRANT ALL PRIVILEGES  ON DATABASE cp_offer TO "alexei.korchagin"; FLUSH PRIVILEGES; 
 
-CREATE USER 'backup'@'%' IDENTIFIED BY '2abvp3W34ZnjVFwc5oHJ';
 
 REVOKE ALL PRIVILEGES ON *.* TO 'alexei.korchagin'@'%' WITH GRANT OPTION;
 
